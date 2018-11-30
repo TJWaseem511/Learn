@@ -1,1 +1,1 @@
-This is a file in new directory typescrip
+//This is a file in new directory typescrip

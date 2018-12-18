@@ -8,7 +8,7 @@ function add(...y:number[]){
     return sum;;
 }
 
-console.log(add(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20));
+console.log(add(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22));
 
 function display(f_name: string, l_name?: string){
     let message:string = "Welcome "+f_name;

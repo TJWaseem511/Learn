@@ -1,0 +1,38 @@
+<div class="container row d-flex justify-content-center mt-3">
+  <div class="col-sm-6">
+  <h3 class="display-6">Create your account:</h3>
+  <hr class="row bg-primary">
+  <div>
+    <form class="m-2" [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+      <div class="row d-flex justify-content-between form-group" formGroupName="name">
+        <input type="text" placeholder="firstname" class="form-control col" name="firstName" formControlName="firstName">
+        <input type="text" placeholder="lastname" class="form-control col" name="lastName" formControlName="lastName">
+        <span *ngIf="(signUpForm.get('name.firstName').touched && !signUpForm.get('name.firstName').valid)" style="color: grey">Please enter Valid First Name</span>
+        <span *ngIf="(signUpForm.get('name.lastName').touched && !signUpForm.get('name.lastName').valid)" style="color: grey">Please enter Valid Last Name</span>
+      </div>
+      <div class="form-group row">
+        <div class="input-group">
+        <input type="text" placeholder="email" class="form-control" name="email" formControlName="email">
+        <!-- <div class="input-group-append">
+          <span class="input-group-text">@gmail.com</span>
+        </div> -->
+        </div>
+      </div>
+      <div class="row d-flex justify-content-between form-group">
+        <input type="password" placeholder="Enter password" class="form-control col" name="password" formControlName="password">
+        <input type="password" placeholder="re enter password" class="form-control col" name="re_password" formControlName="re_password">
+        <button class="btn btn-sm btn-outline-primary" type="button" name="show" >Show</button>
+      </div>
+      <div class="row">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="customCheck1" name="terms" formControlName="terms">
+          <label class="custom-control-label" for="customCheck1" >I have read & accept terms & conditions.</label>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-end">
+        <button class="btn btn-primary" type="submit">Signup</button>
+      </div>
+    </form>
+  </div>
+  </div>
+</div>

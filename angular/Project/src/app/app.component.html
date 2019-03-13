@@ -1,0 +1,13 @@
+<app-header></app-header>
+<div class="container-fluid p-2 row d-flex justify-content-center">
+    <div class="p-2 col-sm-11">
+        <!-- Below is the depricated technique of rendering using If & Else -->
+        <!-- 
+        <app-recepies *ngIf="displayRecepies; else displayShoppingList"></app-recepies>
+        <ng-template #displayShoppingList>
+                <app-shopping-list></app-shopping-list>
+        </ng-template> -->
+        <!-- router-outlet is the place where the data resulting from Routes is rendered. -->
+        <router-outlet></router-outlet>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="container-fluid mh-75">
+  <div class="">
+    <img [src]="recepie.imgURL" alt="recepieImage" class="image-responsive" style="max-height: 250px;">
+  </div>
+  <div class="row">
+    <div class="col-5">
+      <h4 class="display-4">{{recepie.name}}</h4>
+      <h5><strong>Description:</strong></h5><p>{{recepie.description}}</p>
+    </div>
+    <div class="col-7">
+      <h4>Ingredients:</h4>
+      <ul class="list-group-sm">
+        <li class="list-group-item" *ngFor="let ingredient of recepie.ingredients">{{ingredient.name}}({{ingredient.amount}})</li>
+      </ul>
+    </div>
+  </div>
+  <div class="mt-1">
+      <div class="btn-group">
+          <button class="btn btn-outline-primary" (click)="addToCart()">Add to Cart</button>
+          <button class="btn btn-outline-warning" routerLink="edit">Edit recepie</button>
+          <button class="btn btn-outline-danger">Delete recepie</button>
+      </div>
+  </div>
+</div>

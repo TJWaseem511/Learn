@@ -1,0 +1,14 @@
+<div class="row mx-auto">
+  <div class="col-md-4">
+      <app-recepie-list></app-recepie-list>
+  </div>
+  <div class="col-sm-8 d-flex justify-content-center">
+    <router-outlet></router-outlet>
+    <!-- <app-recepie-detail [selectedRecepie]="recepieSelected" *ngIf="recepieSelected; else noRecepieSelected"></app-recepie-detail>
+    <ng-template #noRecepieSelected>
+      <div class="container-fluid jumbotron">
+        <h1 class="display-4">Please select a recepie</h1>
+      </div>
+    </ng-template> -->
+  </div>
+</div>

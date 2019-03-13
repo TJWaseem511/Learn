@@ -1,0 +1,11 @@
+<a [routerLink]="recepie_item.name" routerLinkActive="active" class="list-group-item list-group-item-action" style="cursor:pointer" (click)="onClicked()">
+    <div class="row">
+      <div class="col-8">
+          <h4 class="list-group-item-heading">{{recepie_item.name}}</h4>
+          <p class="list-group-item-text">{{recepie_item.description}}</p>
+      </div>
+      <span class="col-4">
+          <img [src]="recepie_item.imgURL" alt="{{recepie_item.name}}" class="img-responsive mw-100" >
+      </span>
+    </div>
+  </a>

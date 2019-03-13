@@ -1,0 +1,6 @@
+<div class="mb-1">
+    <button class="btn btn-outline-primary" routerLink="New">New Recepie</button>
+</div>
+<div class="list-group">
+    <app-recepie-item *ngFor="let r of recepies; let i = index" [item]="r" [index]="i"></app-recepie-item>
+</div>

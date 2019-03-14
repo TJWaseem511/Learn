@@ -5,8 +5,7 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { RecepieStartComponent } from './recepies/recepie-start/recepie-start.component';
 import { RecepieDetailComponent } from './recepies/recepie-detail/recepie-detail.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { NewRecepieComponent } from './recepies/new-recepie/new-recepie.component';
-import { RecepieEditComponent } from './recepies/recepie-edit/recepie-edit.component';
+import { NewRecepieComponent } from './recepies/new-recepie/new-recepie.component'; 
 
 
 const appRoutes: Routes = [

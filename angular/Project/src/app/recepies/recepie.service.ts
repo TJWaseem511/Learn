@@ -13,14 +13,29 @@ export class RecepieService{
     getRecepies(){
         return this.recepies;
     }
-    getRecepie(name: string){
-        for(let r of this.recepies)
-            if(r.name === name)
-                return r;
+    getRecepie(name: string): Recepie{
+        return this.recepies[this.getRecepieIndex(name)];
+    }
+    getRecepieIndex(name: String): number{
+        for(let i in this.recepies)
+            if(this.recepies[i].name == name)
+                return +i;
     }
     addRecepie(recepie: Recepie){
         this.recepies.push(recepie);
-        console.log("Recepie with name "+recepie.name+" added successfully");
-        console.log(this.recepies[this.recepies.length-1]);
+        //console.log("Recepie with name "+recepie.name+" added successfully");
+        //console.log(this.recepies[this.recepies.length-1]);
+    }
+
+    updateRecepie(recepieToUpdate: Recepie){
+        let index = this.getRecepieIndex(recepieToUpdate.name);
+        this.recepies[index] = recepieToUpdate;
+        //
+        //while(recepieToUpdate.name!)
+        //this.recepies.splice();
+    }
+    
+    deleteRecepie(recepie: Recepie){
+        this.recepies.splice(this.getRecepieIndex(recepie.name), 1);
     }
 }

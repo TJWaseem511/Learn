@@ -14,7 +14,6 @@ import { ShoppingListEditComponent } from './shopping-list/shopping-list-edit/sh
 import { RecepieStartComponent } from './recepies/recepie-start/recepie-start.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NewRecepieComponent } from './recepies/new-recepie/new-recepie.component';
-import { RecepieEditComponent } from './recepies/recepie-edit/recepie-edit.component';
 
 /* const appRoutes: Routes = [
   {path: '', component: RecepiesComponent, pathMatch: 'full'},
@@ -34,7 +33,6 @@ import { RecepieEditComponent } from './recepies/recepie-edit/recepie-edit.compo
     RecepieStartComponent,
     PageNotFoundComponent,
     NewRecepieComponent,
-    RecepieEditComponent
   ],
   imports: [
     BrowserModule,

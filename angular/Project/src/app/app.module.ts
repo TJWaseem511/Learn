@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms'
+import {HttpClientModule} from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,11 @@ import { ShoppingListEditComponent } from './shopping-list/shopping-list-edit/sh
 import { RecepieStartComponent } from './recepies/recepie-start/recepie-start.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NewRecepieComponent } from './recepies/new-recepie/new-recepie.component';
+import { DatabaseService } from './shared/database.service';
+import { RecepieService } from './recepies/recepie.service';
+import { AuthenticationComponent } from './authentication/authentication.component';
+import { AuthService } from './shared/auth.service';
+import { UserDetails } from './shared/userDetails.service';
 
 /* const appRoutes: Routes = [
   {path: '', component: RecepiesComponent, pathMatch: 'full'},
@@ -33,14 +39,21 @@ import { NewRecepieComponent } from './recepies/new-recepie/new-recepie.componen
     RecepieStartComponent,
     PageNotFoundComponent,
     NewRecepieComponent,
+    AuthenticationComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    HttpClientModule,//To use the HTTP related services in the application
+    FormsModule, 
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    DatabaseService, 
+    RecepieService, 
+    AuthService,
+    UserDetails
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,10 +1,14 @@
 <div class="container-fluid mh-75">
-  <div class="">
-    <img [src]="recepie.imgURL" alt="recepieImage" class="image-responsive" style="max-height: 250px;">
+  <div class="row">
+      <h4 class="display-4 col-xs-12">{{recepie.name}}</h4>
   </div>
+  <hr>
+  <div class="image-responsive">
+    <img [src]="recepie.imgURL" alt="recepieImage" class="image-responsive" style="max-height: 400px;">
+  </div>
+  <hr>
   <div class="row">
     <div class="col-5">
-      <h4 class="display-4">{{recepie.name}}</h4>
       <h5><strong>Description:</strong></h5><p>{{recepie.description}}</p>
     </div>
     <div class="col-7">

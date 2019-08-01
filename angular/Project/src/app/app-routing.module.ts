@@ -6,6 +6,7 @@ import { RecepieStartComponent } from './recepies/recepie-start/recepie-start.co
 import { RecepieDetailComponent } from './recepies/recepie-detail/recepie-detail.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NewRecepieComponent } from './recepies/new-recepie/new-recepie.component'; 
+import { AuthenticationComponent } from './authentication/authentication.component';
 
 
 const appRoutes: Routes = [
@@ -16,6 +17,7 @@ const appRoutes: Routes = [
     {path: ':name', component: RecepieDetailComponent},
     {path: ':name/edit', component: NewRecepieComponent}
   ]},
+  {path: 'authentication', component: AuthenticationComponent},
   {path:'Shopping', component:ShoppingListComponent },
   {path: '**', component: PageNotFoundComponent}
 ];
